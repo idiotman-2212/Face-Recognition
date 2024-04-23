@@ -20,19 +20,20 @@
 
 Chú ý: Trong các ảnh sưu tầm, chỉ có đúng 1 khuôn mặt của người đó, không được có quá 1 khuôn mặt/ảnh.
 Ví dụ cây thư mục của mình để các bạn tham khảo:
--FaceData
-   |-processed
-   |   |-Anh
-   |   |-dien
-   |   |-Nhut Truong
-   |   |-Truong
-   |   |-Tuan Anh
-   |-raw
-       |-Anh
-       |-dien
-       |-Nhut Truong
-       |-Truong
-       |-Tuan Anh
+-[FaceData](#)
+   |- [processed](#)
+   |   |- [Anh](#)
+   |   |- [dien](#)
+   |   |- [Nhut Truong](#)
+   |   |- [Truong](#)
+   |   |- [Tuan Anh](#)
+   |- [raw](#)
+       |- [Anh](#)
+       |- [dien](#)
+       |- [Nhut Truong](#)
+       |- [Truong](#)
+       |- [Tuan Anh](#)
+
 # Cài đặt các thư viện cần thiết
 Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau để cài tất cả các thư viện cần thiết: 
 <br>
@@ -48,18 +49,14 @@ Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau �
 - Các bạn tải weights pretrain về tại link này: Tại **đây** (https://drive.google.com/file/d/1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-/view). Sau khi tải xong về, các bạn copy toàn bộ file tải về vào thư mục Models, chú ý chỉ lấy file, bỏ hết các thư mục như hình bên dưới của mình.
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/b2dabad2-c4b7-4913-bd6f-897097de0494)
 # Train model để nhận diện khuôn mặt.
-- Chuyển về thư mục MiAI_FaceRecog_3 nếu đang đứng ở thư mục khác nhé. Sau đó chạy lệnh train:
-<br>
-**python src/classifier.py TRAIN Dataset/FaceData/processed Models/20180402-114759.pb Models/facemodel.pkl --batch_size 1000**
-<br>
+- Chuyển về thư mục MiAI_FaceRecog_3 nếu đang đứng ở thư mục khác nhé. Sau đó chạy lệnh train: <br>
+**python src/classifier.py TRAIN Dataset/FaceData/processed Models/20180402-114759.pb Models/facemodel.pkl --batch_size 1000** <br>
 - Khi nào màn hình hiện lên chữ “Saved classifier model to file “Models/facemodel.pkl” là xong.
 # Chạy chương trình.
-- Các bạn chạy file face_rec_cam.py bằng lệnh sau:
-<br>
+- Các bạn chạy file face_rec_cam.py bằng lệnh sau: <br>
 **python src/face_rec_cam.py**
-Kết quả:
+- Kết quả:
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/004a53ed-75b1-48e4-90f9-b45c08632d71)
-- Nhận diện qua video. Chạy lệnh:
-<br>
+- Nhận diện qua video. Chạy lệnh: <br>
 **python src/face_rec.py --path video/camtest.mp4**
 
