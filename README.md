@@ -60,3 +60,5 @@ Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau �
 - Nhận diện qua video. Chạy lệnh: <br>
 **python src/face_rec.py --path video/camtest.mp4**
 
+# Tài liệu tham khảo
+https://miai.vn/2019/09/11/face-recog-2-0-nhan-dien-khuon-mat-trong-video-bang-mtcnn-va-facenet/
