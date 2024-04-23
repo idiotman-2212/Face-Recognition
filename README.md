@@ -20,19 +20,7 @@
 
 Chú ý: Trong các ảnh sưu tầm, chỉ có đúng 1 khuôn mặt của người đó, không được có quá 1 khuôn mặt/ảnh.
 Ví dụ cây thư mục của mình để các bạn tham khảo:
--[FaceData](#)
-   |- [processed](#)
-   |   |- [Anh](#)
-   |   |- [dien](#)
-   |   |- [Nhut Truong](#)
-   |   |- [Truong](#)
-   |   |- [Tuan Anh](#)
-   |- [raw](#)
-       |- [Anh](#)
-       |- [dien](#)
-       |- [Nhut Truong](#)
-       |- [Truong](#)
-       |- [Tuan Anh](#)
+![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/76f2ddbc-890c-4fe0-87f0-69930f930a41)
 
 # Cài đặt các thư viện cần thiết
 Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau để cài tất cả các thư viện cần thiết: 
