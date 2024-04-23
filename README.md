@@ -1,5 +1,5 @@
 # Face-Recognition
-##### Nhận diện khuôn mặt bằng MTCNN và Facenet
+### Nhận diện khuôn mặt bằng MTCNN và Facenet
 
 # Tìm hiểu khái niệm
 - MTCNN là viết tắt của Multi-task Cascaded Convolutional Networks. Nó là bao gồm 3 mạng CNN xếp chồng và đồng thời hoạt động khi detect khuôn mặt. Mỗi mạng có cấu trúc khác nhau và đảm nhiệm vai trò khác nhau trong task. Đầu ra của MTCNN là vị trí khuôn mặt và các điểm trên mặt như: mắt, mũi, miệng…
@@ -13,7 +13,8 @@
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/cddc46c3-b909-4025-b8e9-263f4ad0ee96)
 
 # Chuẩn bị ảnh khuôn mặt để train
-- Sưu tầm ảnh của 2 người trở lên, mỗi người 10 tấm hình rõ mặt (tạm chấp nhận yêu cầu hiện tại của bài này là at least 2 người nhé, mình sẽ tìm hiểu thêm sau). Mình ví dụ 5 người tên là Anh, dien, Nhut Truong, Truong và Tuan Anh nhé. Các bạn tạo 5 thư mục Anh, dien, Nhut Truong, Truong và Tuan Anh trong thư mục raw và copy ảnh của 5 người vào riêng 5 thư mục đó, ảnh của ai vào thư mục của người đó nhé. Hoặc bạn có thể tạo 100 ảnh dựa vào webcam bằng cách chạy lệnh: **python capture.py**.  ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/a15a997e-8772-4f11-9f26-7582022b573f)
+- Sưu tầm ảnh của 2 người trở lên, mỗi người 10 tấm hình rõ mặt (tạm chấp nhận yêu cầu hiện tại của bài này là at least 2 người nhé, mình sẽ tìm hiểu thêm sau). Mình ví dụ 5 người tên là Anh, dien, Nhut Truong, Truong và Tuan Anh nhé. Các bạn tạo 5 thư mục Anh, dien, Nhut Truong, Truong và Tuan Anh trong thư mục raw và copy ảnh của 5 người vào riêng 5 thư mục đó, ảnh của ai vào thư mục của người đó nhé. Hoặc bạn có thể tạo 100 ảnh dựa vào webcam bằng cách chạy lệnh: **python capture.py**.
+![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/a15a997e-8772-4f11-9f26-7582022b573f)
 
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/7bbb404c-357d-484f-b392-0278a6c6cfb4)
 
@@ -32,7 +33,6 @@ Ví dụ cây thư mục của mình để các bạn tham khảo:
        |-Nhut Truong
        |-Truong
        |-Tuan Anh
-
 # Cài đặt các thư viện cần thiết
 Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau để cài tất cả các thư viện cần thiết: 
 <br>
@@ -41,7 +41,6 @@ Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau �
 # Tiền xử lý dữ liệu để cắt khuôn mặt từ ảnh gốc
 - Với chỗ ảnh đã sưu tầm bên trên, có thể là ảnh cả người, bây giờ chúng ta sẽ cắt riêng khuôn mặt ra để train nhé. Chuyển về thư mục MiAI_FaceRecog_3 và chạy lệnh:<br>
 **python src/align_dataset_mtcnn.py  Dataset/FaceData/raw Dataset/FaceData/processed --image_size 160 --margin 32  --random_order --gpu_memory_fraction 0.25**
-
 - Chạy xong thấy nó hiển thị dạng “Total number of images: …” là thành công rồi. Các bạn để ý sẽ thấy có thêm thư mục processed có cấu trúc tương tự thư mục raw nhưng chỉ chứa dữ liệu khuôn mặt đã được xử lý. Ví dụ như ảnh dưới:
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/d69e86d4-d32f-4dae-99e2-25e56dd9cf73)
 
@@ -50,19 +49,16 @@ Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau �
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/b2dabad2-c4b7-4913-bd6f-897097de0494)
 # Train model để nhận diện khuôn mặt.
 - Chuyển về thư mục MiAI_FaceRecog_3 nếu đang đứng ở thư mục khác nhé. Sau đó chạy lệnh train:
-- <br>
+<br>
 **python src/classifier.py TRAIN Dataset/FaceData/processed Models/20180402-114759.pb Models/facemodel.pkl --batch_size 1000**
 <br>
-Khi nào màn hình hiện lên chữ “Saved classifier model to file “Models/facemodel.pkl” là xong.
-
+- Khi nào màn hình hiện lên chữ “Saved classifier model to file “Models/facemodel.pkl” là xong.
 # Chạy chương trình.
 - Các bạn chạy file face_rec_cam.py bằng lệnh sau:
 <br>
 **python src/face_rec_cam.py**
-
 Kết quả:
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/004a53ed-75b1-48e4-90f9-b45c08632d71)
-
 - Nhận diện qua video. Chạy lệnh:
 <br>
 **python src/face_rec.py --path video/camtest.mp4**
