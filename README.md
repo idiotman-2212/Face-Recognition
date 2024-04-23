@@ -19,7 +19,7 @@
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/7bbb404c-357d-484f-b392-0278a6c6cfb4)
 
 Chú ý: Trong các ảnh sưu tầm, chỉ có đúng 1 khuôn mặt của người đó, không được có quá 1 khuôn mặt/ảnh.
-Ví dụ cây thư mục của mình để các bạn tham khảo:
+Ví dụ cây thư mục của mình để các bạn tham khảo:<br>
 ![image](https://github.com/idiotman-2212/Face-Recognition/assets/82036270/76f2ddbc-890c-4fe0-87f0-69930f930a41)
 
 # Cài đặt các thư viện cần thiết
