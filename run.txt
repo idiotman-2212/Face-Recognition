@@ -1,0 +1,16 @@
+Phát hiện khuôn mặt bằng MTCNN, trích xuất đặt trừng FaceNet, dùng SVM để phân loại
+
+Chụp 100 ảnh để chuẩn bị xử lý
+- python capture.py
+
+Tiền xử lý dữ liệu cắt khuôn mặt từ ảnh gốc:
+- python src/align_dataset_mtcnn.py  Dataset/FaceData/raw Dataset/FaceData/processed --image_size 160 --margin 32  --random_order --gpu_memory_fraction 0.25
+
+Train model nhận diện khuôn mặt:
+- python src/classifier.py TRAIN Dataset/FaceData/processed Models/20180402-114759.pb Models/facemodel.pkl --batch_size 1000
+
+Chaỵ chương trình nhâ diện khuôn mặt:
+- python src/face_rec_cam.py
+
+Nhận diện khuôn mặt qua video:
+- python src/face_rec.py --path video/camtest.mp4
