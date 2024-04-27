@@ -25,7 +25,7 @@ Ví dụ cây thư mục của mình để các bạn tham khảo:<br>
 # Cài đặt các thư viện cần thiết
 Các bạn đứng ở thư mục gốc là MiAI_FaceRecog_3 chạy lệnh sau để cài tất cả các thư viện cần thiết: 
 <br>
-**pip install -r requirements.txt**
+<pre>pip install -r requirements.txt </pre>
 
 # Tiền xử lý dữ liệu để cắt khuôn mặt từ ảnh gốc
 - Với chỗ ảnh đã sưu tầm bên trên, có thể là ảnh cả người, bây giờ chúng ta sẽ cắt riêng khuôn mặt ra để train nhé. Chuyển về thư mục MiAI_FaceRecog_3 và chạy lệnh:<br>
